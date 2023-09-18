@@ -13,7 +13,7 @@ void main() {
   int result2 = puissance(base, exposant);
   print('$base à la puissance $exposant est $result2');
 
-  String lettre = 'P';
+  String lettre = 'ö';
   String result3 = consVoyel(lettre);
   print('$lettre est une $result3.');
 }
@@ -70,7 +70,8 @@ String consVoyel(String lettre) {
     'ô',
     'û',
     'ù',
-    'ü'
+    'ü',
+    'ö'
   ];
 
   if (lettre.length == 1) {
