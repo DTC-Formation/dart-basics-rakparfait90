@@ -1,16 +1,20 @@
 void main() {
-  // int test = 4;
-  // int somme = addition(90, test);
-  // print(somme);
+  int test = 4;
+  int somme = addition(90, test);
+  print(somme);
 
   int n = 4;
-  int result = factoriel(n);
-  print(result);
+  int result1 = factoriel(n);
+  print(result1);
 
   int base = 2;
   int exposant = 3;
-  int resultat = puissance(base, exposant);
-  print(resultat);
+  int result2 = puissance(base, exposant);
+  print(result2);
+
+  String lettre = 'A';
+  String result3 = consVoyel(lettre);
+  print('$lettre est une $result3.');
 }
 
 int addition(int nb1, int nb2) {
@@ -36,6 +40,24 @@ int puissance(int nb, int n) {
   return resultat;
 }
 
-String consVoyel() {
-  List voyelle = ['a', 'e', 'i', 'o'];
+String consVoyel(String lettre) {
+  List<String> voyelles = [
+    'a',
+    'e',
+    'i',
+    'o',
+    'u'
+  ]; // Ajoutez d'autres voyelles au besoin
+
+  if (lettre.length == 1) {
+    lettre = lettre
+        .toLowerCase(); // Convertit la lettre en minuscule pour être insensible à la casse
+    if (voyelles.contains(lettre)) {
+      return 'voyelle';
+    } else {
+      return 'consonne';
+    }
+  } else {
+    return 'Veuillez entrer une seule lettre.';
+  }
 }
