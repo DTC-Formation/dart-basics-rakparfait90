@@ -1,5 +1,5 @@
 import 'dart:io';
-// import 'dart:math';
+import 'dart:math';
 
 String readLineSync() {
   String? s = stdin.readLineSync();
@@ -19,7 +19,7 @@ void main() {
 
   // game loop
   while (true) {
-    // int remainingTurns = int.parse(readLineSync());
+    int remainingTurns = int.parse(readLineSync());
     var directionX = "", directionY = "";
 
     if (thorX > lightX) {
