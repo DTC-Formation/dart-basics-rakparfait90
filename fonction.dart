@@ -13,7 +13,7 @@ void main() {
   int result2 = puissance(base, exposant);
   print('$base à la puissance $exposant est $result2');
 
-  String lettre = 'ö';
+  String lettre = '1';
   String result3 = consVoyel(lettre);
   print('$lettre est une $result3.');
 }
@@ -40,6 +40,14 @@ int factoriel(int n) {
   }
 
   return resultat;
+}
+
+int factorial(int x) {
+  if (x == 0) {
+    return 1;
+  } else {
+    return x * factorial(x - 1);
+  }
 }
 
 int puissance(int nb, int n) {
